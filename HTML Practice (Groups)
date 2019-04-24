@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <!-- Meng Chen-->
 <html>
   <head>
@@ -74,7 +75,7 @@ th {
 }
 </style>
 
-<table style ="width"100%">
+<table style =width:100%>
   <tr>
     <th> Ability </th>
     <th> Description </th>
@@ -92,6 +93,6 @@ th {
     <th> Genji rapidly throws three shuriken <br>in a set spread in front of him
     <th> 28 per shuriken <br> x2 crit multiplier</th>
     <th> 24 shurikens <br> Reload: 1.5 seconds</th>
-    <hr>
+  <hr>
   </body>
 </html>
