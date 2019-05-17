@@ -1,1 +1,55 @@
+<!DOCTYPE html>
+<html>
+    <head>
+       <title>Where Has Time Gone?</title>
+       <meta charset="utf-8">
+       <meta name="viewport" content="width=device-width, initial-scale=1">
+       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+       <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+       <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+       
+       <style type="text/css">
+          body
+           {background: rgb(244, 236, 193);
+            background-image: url("http://ku.90sjimg.com/back_pic/04/65/29/285877891c33e34.jpg!/fwfh/804x1429/quality/90/unsharp/true/compress/true/watermark/text/OTDorr7orqE=/font/simkai/align/southeast/opacity/20/size/50");
+            background-attachment: fixed;}
+           .navbar .dropdown-item:hover
+           {background-color: rgb(244, 236, 193)}
+           .row
+           {margin: 10px;
+            background: rgb(247, 235, 171);
+            border-radius: 10px;
+            padding: 10px;}
+           .strikethrough
+            {text-decoration: line-through;}    
+        </style>
+    </head>
+    
+    <body>
+       <nav class="navbar navbar-expand-md bg-light justify-content-center navbar-light fixed-top">
+          <a class="navbar-brand" href="home.html">
+          <img src="data:image/png;base64,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" alt="logo" style="width:80px;">
+          </a>
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="home.html">Home</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link active dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">Artworks</a>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" href="drawing.html">Drawing</a>
+              <a class="dropdown-item" href="painting.html">Painting</a>
+              <a class="dropdown-item" href="vedio.html">Video</a>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="about.html">About</a>
+          </li>
+        </ul>
+       </nav>
 
+<h1>Where Has Time Gone?</h1>
+
+</body>
+</html>
