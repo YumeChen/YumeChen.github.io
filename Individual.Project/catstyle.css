@@ -149,14 +149,14 @@
    }
 
 .whiskers .whisker
-   {width: 50px;
+   {width: 30px;
     height: 2px;
     background: #000;
     position: absolute;
     z-index: 30;}
 
 .whiskers .rTop
-   {left: 140px;
+   {left: 150px;
     top: 95px;
     -webkit-transform: rotate(160deg);
     -moz-transform: rotate(160deg);
@@ -165,11 +165,11 @@
     transform: rotate(160deg)}
 
 .whiskers .rMiddle
-   {left: 140px;
+   {left: 150px;
     top: 110px;}
 
 .whiskers .rBottom
-   {left: 140px;
+   {left: 150px;
     top: 125px;
     -webkit-transform: rotate(200deg);
     -moz-transform: rotate(200deg);
