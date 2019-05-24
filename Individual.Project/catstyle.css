@@ -1,5 +1,5 @@
 .cat_container
-   {position: relative;}
+   {position: static;}
 
 .cat
    {width: 220px;
