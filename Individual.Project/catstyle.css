@@ -1,5 +1,8 @@
 .cat_container
-   {position: static;}
+   {position: fixed;
+    top: 300px;
+    right: 50px;
+    width: 300px;}
 
 .cat
    {width: 220px;
