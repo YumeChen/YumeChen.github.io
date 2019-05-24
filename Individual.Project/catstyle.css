@@ -1,7 +1,7 @@
 .cat_container
    {position: fixed;
     top: 100px;
-    right: 200px;
+    right: 250px;
     width: 300px;}
 
 .cat
@@ -228,7 +228,7 @@
     -ms-transform:rotate(15deg);
     transform:rotate(15deg);
     position:absolute;
-    right:30px;
+    right:40px;
     top:55px;
     z-index:3;}
 
