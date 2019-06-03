@@ -121,9 +121,9 @@
    let rand2 = Math.floor(Math.random() * 10);
    let rowAnswer = row[rand1];
    let colAnswer = col[rand2];
-   function showMap(row, col) {
-      let tbl = document.getElementById("map-body"); 
-      tbl.innerHTML = "";
+   function showMap(rowAnswer, colAnswer) {
+      //let tbl = document.getElementById("map-body"); 
+      //tbl.innerHTML = "";
       let count = 0;
       for (let i = 0; i < 11; i++) {
          let row = document.createElement("tr");
@@ -140,7 +140,7 @@
          tbl.appendChild(row);
       }
    }
-   showMap(row, col);
+   showMap(rowAnswer, colAnswer);
 
 </script>
 </body>
