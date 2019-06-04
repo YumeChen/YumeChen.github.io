@@ -32,23 +32,6 @@
 
   .strikethrough
     {text-decoration: line-through;}  
-
-  div.gallery
-    {margin: 30px;
-     border: 5px solid #ccc;
-     float: left;
-     width: 500px;}
-
-  div.gallery:hover
-    {border: 1px solid #e8e6e6;} 
-  
-  div.gallery img
-    {width: 100%;
-     height: auto;}
-  
-  div.desc
-    {padding: 30px;
-     text-align: left;}
   
   * {box-sizing; border-box}
   
@@ -145,21 +128,61 @@
 
   <div class="slideshow-container">
      <div class="mySlides">
-        <div class="numbertext">1 / 3</div>
+        <div class="numbertext">1 / 4</div>
         <img src="http://yumechen.com/wp-content/uploads/2019/04/IMG_2036-1024x393.jpg" style="width:100%">
-        <div class="text">Value to Color: Portrait</div>
+        <div class="text">
+          <ul>
+                 <li><strong>Title:</strong> Value to Color: Portrait</li>
+                 <li><strong>Artist:</strong> Meng Chen, Ian Zhang</li>
+                 <li><strong>Date:</strong> 08. 09. 2016</li>
+                 <li><strong>Medium:</strong> Water Color</li>
+                 <li><strong>Dimensions:</strong> 20 in x 5 in</li>
+          </ul>
+        </div>
      </div>
 
      <div class="mySlides">
-        <div class="numbertext">2 / 3</div>
+        <div class="numbertext">2 / 4</div>
         <img src="http://yumechen.com/wp-content/uploads/2019/05/IMG_2866-1024x768.jpg" style="width:100%">
-        <div class="text">Still Life</div>
+        <div class="text">
+          <ul>
+                 <li><strong>Title:</strong> Still Life</li>
+                 <li><strong>Artist:</strong> Meng Chen</li>
+                 <li><strong>Date:</strong> 05. 17. 2018</li>
+                 <li><strong>Medium:</strong> Oil on Canvas</li>
+                 <li><strong>Dimensions:</strong> 24 in x 18 in</li>
+          </ul>
+        </div>
      </div>
 
      <div class="mySlides">
-        <div class="numbertext">3 / 3</div>
+        <div class="numbertext">3 / 4</div>
         <img src="http://yumechen.com/wp-content/uploads/2019/05/IMG_2850-1024x768.jpg" style="width:100%">
-        <div class="text">Future Life-style</div>
+        <div class="text">
+          <ul>
+                 <li><strong>Title:</strong> Future Life-style</li>
+                 <li><strong>Artist:</strong> Meng Chen</li>
+                 <li><strong>Date:</strong> 05. 26. 2019</li>
+                 <li><strong>Medium:</strong> Water Color</li>
+                 <li><strong>Dimensions:</strong> 12 in x 9 in</li>
+          </ul>
+        </div>
+     </div>
+    
+    <div class="mySlides">
+        <div class="numbertext">4 / 4</div>
+        <img src="http://yumechen.com/wp-content/uploads/2019/04/IMG_2040-1-768x1024.jpg" style="width:100%">
+        <div class="text">
+          <ul>
+                 <li><strong>Title:</strong> Freehand drawing of Three Apples</li>
+                 <li><strong>Artist:</strong> Meng Chen</li>
+                 <li><strong>Date:</strong> 04. 17. 2018</li>
+                 <li><strong>Medium:</strong> Oil on Canvas</li>
+                 <li><strong>Dimensions:</strong> 6 in x 7 in</li>
+                 <li><strong>Original work:</strong> Three Apples</li>
+                 <li><strong>Original Artist:</strong> Paul Cezanne</li>
+          </ul>
+        </div>
      </div>
 
      <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
@@ -171,6 +194,7 @@
      <span class="dot" onclick="currentSlide(1)"></span> 
      <span class="dot" onclick="currentSlide(2)"></span> 
      <span class="dot" onclick="currentSlide(3)"></span> 
+     <span class="dot" onclick="currentSlide(4)"></span> 
   </div>
 
   <script>
@@ -197,71 +221,28 @@
       dots[slideIndex-1].className += " active";}
   </script>
 
-  <div class="container" style="margin-top: 700px;">
+  <div class="container" style="margin-top: 120px;">
      <div class="row">
      <div class="col">
-        <h1>Painting</h1>
-        <div class="gallery">
-           <a target="_blank" href="http://yumechen.com/wp-content/uploads/2019/04/IMG_2036-1024x393.jpg">
-              <img src="http://yumechen.com/wp-content/uploads/2019/04/IMG_2036-1024x393.jpg" alt="Value to Color: Portrait" width="1200" height="800">
-           </a>
-           <div class="desc">
-              <ul>
-                 <li><strong>Title:</strong> Value to Color: Portrait</li>
-                 <li><strong>Artist:</strong> Meng Chen, Ian Zhang</li>
-                 <li><strong>Date:</strong> 08. 09. 2016</li>
-                 <li><strong>Medium:</strong> Water Color</li>
-                 <li><strong>Dimensions:</strong> 20 in x 5 in</li>
-              </ul>
-           </div>
-        </div>
-
-        <div class="gallery">
-           <a target="_blank" href="http://yumechen.com/wp-content/uploads/2019/04/IMG_2040-1-768x1024.jpg">
-              <img src="http://yumechen.com/wp-content/uploads/2019/04/IMG_2040-1-768x1024.jpg" alt="Freehand drawing of Three Apples" width="800" height="1200">
-           </a>
-           <div class="desc">
-              <ul>
-                 <li><strong>Title:</strong> Freehand drawing of Three Apples</li>
-                 <li><strong>Artist:</strong> Meng Chen</li>
-                 <li><strong>Date:</strong> 04. 17. 2018</li>
-                 <li><strong>Medium:</strong> Oil on Canvas</li>
-                 <li><strong>Dimensions:</strong> 6 in x 7 in</li>
-                 <li><strong>Original work:</strong> Three Apples</li>
-                 <li><strong>Original Artist:</strong> Paul Cezanne</li>
-              </ul>
-           </div>
-        </div>
-
-        <div class="gallery">
-           <a target="_blank" href="http://yumechen.com/wp-content/uploads/2019/05/IMG_2866-1024x768.jpg">
-              <img src="http://yumechen.com/wp-content/uploads/2019/05/IMG_2866-1024x768.jpg" alt="Still Life" width="1200" height="800">
-           </a>
-           <div class="desc">
-              <ul>
-                 <li><strong>Title:</strong> Still Life</li>
-                 <li><strong>Artist:</strong> Meng Chen</li>
-                 <li><strong>Date:</strong> 05. 17. 2018</li>
-                 <li><strong>Medium:</strong> Oil on Canvas</li>
-                 <li><strong>Dimensions:</strong> 24 in x 18 in</li>
-              </ul>
-           </div>
-        </div>
-
-        <div class="gallery">
-           <a target="_blank" href="http://yumechen.com/wp-content/uploads/2019/05/IMG_2850-1024x768.jpg">
-              <img src="http://yumechen.com/wp-content/uploads/2019/05/IMG_2850-1024x768.jpg" alt="Future Life-style" width="1200" height="800">
-           </a>
-           <div class="desc">
-              <ul>
-                 <li><strong>Title:</strong> Future Life-style</li>
-                 <li><strong>Artist:</strong> Meng Chen</li>
-                 <li><strong>Date:</strong> 05. 26. 2019</li>
-                 <li><strong>Medium:</strong> Water Color</li>
-                 <li><strong>Dimensions:</strong> 12 in x 9 in</li>
-              </ul>
-           </div>
-        </div>
+       <br>
+       <br>
+       <br>
+       <br>
+       <br>
+       <br>
+       <br>
+       <br>
+       <br>
+       <br>
+       <br>
+       <br>
+       <br>
+       <br>
+       <br>
+       <br>
+       <br>
+       <br>
+       <br>
      </div>
      </div>
   </div>
