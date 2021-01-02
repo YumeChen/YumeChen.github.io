@@ -1,240 +1,208 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <title>Where Has Time Gone?</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <!--Bootstrap 4-->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>
+   <head>
+      <title>Where Has Time Gone?</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <!-- Bootstrap 4-->
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
+         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"></script>
+         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>
 
-  <style type="text/css">
-    body
-      {background: rgb(218, 218, 218);
-       color: #000;
-       background-image: url("http://file06.16sucai.com/2016/0922/83ce651a1ccdf151dc14158d2dc4f1c7.jpg");
-       background-attachment: fixed;}
+      <style type="text/css">
+         body
+            {background: rgb(218, 218, 218);
+             color: #000;
+             background-image: url("http://file06.16sucai.com/2016/0922/83ce651a1ccdf151dc14158d2dc4f1c7.jpg");
+             background-attachment: fixed;
+             font-family: Verdana, sans-serif; 
+             margin:0;}
 
-    .navbar .dropdown-item:hover
-      {background-color: rgb(218, 218, 218);}
+         .navbar .dropdown-item:hover
+            {background-color: rgb(218, 218, 218);}
 
-    .row
-      {margin: 10px;
-       background: rgb(218, 218, 218);
-       border-radius: 10px;
-       padding: 10px;}
+         .row
+            {margin: 10px;
+             background: rgb(218, 218, 218);
+             border-radius: 10px;
+             padding: 10px;}
 
-    .strikethrough
-      {text-decoration: line-through;}  
-  
-    * {box-sizing: border-box}
-  
-    .mySlides
-      {sidplay: none;}
-  
-    .slideshow-container
-      {max-width: 1000px;
-       position: relative;
-       margin: auto;}
-  
-    .prev, .next 
-      {cursor: pointer;
-       position: absolute;
-       top: 50%;
-       width: auto;
-       padding: 16px;
-       margin-top: -22px;
-       color: white;
-       font-weight: bold;
-       font-size: 18px;
-       transition: 0.6s ease;
-       border-radius: 0 3px 3px 0;
-       user-select: none;}
-  
-    .next 
-      {right: 0;
-       border-radius: 3px 0 0 3px;}
- 
-    .prev:hover, .next:hover 
-      {background-color: rgba(0,0,0,0.8);}
-  
-    .text 
-      {color: #000;
-       font-size: 15px;
-       padding: 8px 12px;
-       position: absolute;
-       width: 100%;
-       text-align: left;}
-  
-    .numbertext 
-      {color: #000;
-       font-size: 12px;
-       padding: 8px 12px;
-       position: absolute;
-       top: 0;}
-  
-    .dot 
-      {cursor: pointer;
-       height: 15px;
-       width: 15px;
-       margin: 0 2px;
-       background-color: #bbb;
-       border-radius: 50%;
-       display: inline-block;
-       transition: background-color 0.6s ease;}
-  
-    .active, .dot:hover 
-      {background-color: #717171;}
-  </style>
-</head>
+         .strikethrough
+            {text-decoration: line-through;}  
 
-<body>
-  <!--Navigation Menu-->
-  <nav class="navbar navbar-expand-md bg-light justify-content-center navbar-light fixed-top">
-    <a class="navbar-brand" href="individual.project.html">
-      <img src="data:image/png;base64,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" alt="logo" style="width:80px;">
-    </a>
-    <ul class="navbar-nav">
-      <li class="nav-item">
-        <a class="nav-link" href="home.html">Home</a>
-      </li>
-      <li class="nav-item dropdown">
-        <a class="nav-link active dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">Artworks</a>
-        <div class="dropdown-menu">
-          <a class="dropdown-item" href="drawing.html">Drawing</a>
-          <a class="dropdown-item" href="painting.html">Painting</a>
-          <a class="dropdown-item" href="photograph.html">Photograph</a>
-          <a class="dropdown-item" href="video.html">Video</a>
-        </div>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="about.html">About</a>
-      </li>
-    </ul>
-  </nav>
+         div.gallery
+            {margin: 30px;
+             border: 5px solid #ccc;
+             float: left;
+             width: 425px;}
 
-  <div class="container" style="margin-top: 120px;">
-    <div class="row">
-      <div class="col">
-        <h1>Painting</h1>
-        <br>
-          <!--Slideshow Gallery-->
-          <div class="slideshow-container">
-        
-            <div class="mySlides">
-              <div class="numbertext">1 / 5</div>
-              <img src="http://yumechen.com/wp-content/uploads/2019/04/IMG_2036-1024x393.jpg" style="width:100%">
-              <div class="text">
-                <ul>
-                  <li><strong>Title:</strong> Value to Color: Portrait</li>
-                  <li><strong>Artist:</strong> Meng Chen, Ian Zhang</li>
-                  <li><strong>Date:</strong> 08. 09. 2016</li>
-                  <li><strong>Medium:</strong> Water Color</li>
-                  <li><strong>Dimensions:</strong> 20 in x 5 in</li>
-                </ul>
-              </div>
+         div.gallery:hover
+            {border: 1px solid #e8e6e6;} 
+
+         div.gallery img
+            {width: 100%;
+             height: auto;}
+
+         div.desc
+            {padding: 30px;
+             text-align: left;}
+      </style>
+   </head>
+
+   <body>
+      <!--Navigation Menu-->
+      <nav class="navbar navbar-expand-md bg-light justify-content-center navbar-light fixed-top">
+         <a class="navbar-brand" href="home.html">
+            <img src="data:image/png;base64,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" alt="logo" style="width:80px;">
+         </a>
+         <ul class="navbar-nav">
+            <li class="nav-item">
+               <a class="nav-link" href="individual.project.html">Home</a>
+            </li>
+            <li class="nav-item dropdown">
+               <a class="nav-link active dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">Artworks</a>
+               <div class="dropdown-menu">
+                  <a class="dropdown-item" href="drawing.html">Drawing</a>
+                  <a class="dropdown-item" href="painting.html">Painting</a>
+                  <a class="dropdown-item" href="photography.html">Photography</a>
+                  <a class="dropdown-item" href="video.html">Video</a>
+               </div>
+            </li>
+            <li class="nav-item">
+               <a class="nav-link" href="about.html">About</a>
+            </li>
+         </ul>
+      </nav>
+
+      <!--Image Gallery-->
+      <div class="container" style="margin-top: 120px;">
+         <div class="row">
+            <div class="col">
+               <h1>Painting</h1>
+                  <div class="gallery">
+                     <a target="_blank" href="https://user-images.githubusercontent.com/49297283/103452517-5d9f1480-4c85-11eb-9787-2b2f57c6da94.JPG">
+                        <img src="https://user-images.githubusercontent.com/49297283/103452517-5d9f1480-4c85-11eb-9787-2b2f57c6da94.JPG" alt="Value to Color: Portrait" width="600" height="400">
+                     </a>
+                     <div class="desc">
+                        <ul>
+                           <li><strong>Title:</strong> Value to Color: Portrait</li>
+                           <li><strong>Artist:</strong> Meng Chen</li>
+                           <li><strong>Date:</strong> 08. 09. 2016</li>
+                           <li><strong>Medium:</strong> Water Color</li>
+                           <li><strong>Dimensions:</strong> 20 in x 5 in</li>
+                        </ul>
+                     </div>
+                  </div>
+
+                  <div class="gallery">
+                     <a target="_blank" href="https://user-images.githubusercontent.com/49297283/103452522-7b6c7980-4c85-11eb-8d4b-1d8048d26219.JPG">
+                        <img src="https://user-images.githubusercontent.com/49297283/103452522-7b6c7980-4c85-11eb-8d4b-1d8048d26219.JPG" alt="Still Life" width="600" height="400">
+                     </a>
+                     <div class="desc">
+                        <ul>
+                           <li><strong>Title:</strong> Still Life</li>
+                           <li><strong>Artist:</strong> Meng Chen</li>
+                           <li><strong>Date:</strong> 05. 17. 2018</li>
+                           <li><strong>Medium:</strong> Oil on Canvas</li>
+                           <li><strong>Dimensions:</strong> 24 in x 18 in</li>
+                        </ul>
+                     </div>
+                  </div>
+
+                  <div class="gallery">
+                     <a target="_blank" href="https://user-images.githubusercontent.com/49297283/103452541-95a65780-4c85-11eb-8309-b5bcea400018.JPG">
+                        <img src="https://user-images.githubusercontent.com/49297283/103452541-95a65780-4c85-11eb-8309-b5bcea400018.JPG" alt="Future Life-style #1" width="600" height="400">
+                     </a>
+                     <div class="desc">
+                        <ul>
+                           <li><strong>Title:</strong> Future Life-style #1</li>
+                           <li><strong>Artist:</strong> Meng Chen</li>
+                           <li><strong>Date:</strong> 05. 26. 2019</li>
+                           <li><strong>Medium:</strong> Water Color</li>
+                           <li><strong>Dimensions:</strong> 12 in x 9 in</li>
+                        </ul>
+                     </div>
+                  </div>
+
+                  <div class="gallery">
+                     <a target="_blank" href="https://user-images.githubusercontent.com/49297283/103452554-b1116280-4c85-11eb-816e-52d97439a385.JPG">
+                        <img src="https://user-images.githubusercontent.com/49297283/103452554-b1116280-4c85-11eb-816e-52d97439a385.JPG" alt="Future Life-style #2" width="600" height="400">
+                     </a>
+                     <div class="desc">
+                        <ul>
+                           <li><strong>Title:</strong> Future Life-style #2</li>
+                           <li><strong>Artist:</strong> Meng Chen</li>
+                           <li><strong>Date:</strong> 05. 26. 2019</li>
+                           <li><strong>Medium:</strong> Water Color</li>
+                           <li><strong>Dimensions:</strong> 12 in x 9 in</li>
+                        </ul>
+                     </div>
+                  </div>
+
+                  <div class="gallery">
+                     <a target="_blank" href="https://user-images.githubusercontent.com/49297283/103452575-ce463100-4c85-11eb-88e1-0569e22d6c01.JPG">
+                        <img src="https://user-images.githubusercontent.com/49297283/103452575-ce463100-4c85-11eb-88e1-0569e22d6c01.JPG" alt="Freehand Drawing of Three Apples" width="600" height="400">
+                     </a>
+                     <div class="desc">
+                        <ul>
+                           <li><strong>Title:</strong> Freehand Drawing of Three Apples</li>
+                           <li><strong>Artist:</strong> Meng Chen</li>
+                           <li><strong>Date:</strong> 04. 17. 2018</li>
+                           <li><strong>Medium:</strong> Oil on Canvas</li>
+                           <li><strong>Dimensions:</strong> 6 in x 7 in</li>
+                           <li><strong>Original Work:</strong> Three Apples</li>
+                           <li><strong>Original Artist:</strong> Paul Cezanne</li>
+                        </ul>
+                     </div>
+                  </div>
+
+                  <div class="gallery">
+                     <a target="_blank" href="https://user-images.githubusercontent.com/49297283/103452590-e74ee200-4c85-11eb-88f7-d5b87b27f378.JPG">
+                        <img src="https://user-images.githubusercontent.com/49297283/103452590-e74ee200-4c85-11eb-88f7-d5b87b27f378.JPG" alt="Disappear #1" width="600" height="400">
+                     </a>
+                     <div class="desc">
+                        <ul>
+                           <li><strong>Title:</strong> Disappear #1</li>
+                           <li><strong>Artist:</strong> Meng Chen</li>
+                           <li><strong>Date:</strong> 10. 24. 2019</li>
+                           <li><strong>Medium:</strong> Water Color</li>
+                           <li><strong>Dimensions:</strong> 12 in x 9 in</li>
+                        </ul>
+                     </div>
+                  </div>
+
+                  <div class="gallery">
+                     <a target="_blank" href="https://user-images.githubusercontent.com/49297283/103452610-02215680-4c86-11eb-86a9-05ecd5c60a5e.JPG">
+                        <img src="https://user-images.githubusercontent.com/49297283/103452610-02215680-4c86-11eb-86a9-05ecd5c60a5e.JPG" alt="Disappear #2" width="400" height="600">
+                     </a>
+                     <div class="desc">
+                        <ul>
+                           <li><strong>Title:</strong> Disappear #2</li>
+                           <li><strong>Artist:</strong> Meng Chen</li>
+                           <li><strong>Date:</strong> 10. 24. 2019</li>
+                           <li><strong>Medium:</strong> Water Color</li>
+                           <li><strong>Dimensions:</strong> 9 in x 12 in</li>
+                        </ul>
+                     </div>
+                  </div>
+
+                  <div class="gallery">
+                     <a target="_blank" href="https://user-images.githubusercontent.com/49297283/103452623-1a917100-4c86-11eb-9311-92174069d85e.JPG">
+                        <img src="https://user-images.githubusercontent.com/49297283/103452623-1a917100-4c86-11eb-9311-92174069d85e.JPG" alt="Disappear #3" width="400" height="600">
+                     </a>
+                     <div class="desc">
+                        <ul>
+                           <li><strong>Title:</strong> Disappear #3</li>
+                           <li><strong>Artist:</strong> Meng Chen</li>
+                           <li><strong>Date:</strong> 10. 24. 2019</li>
+                           <li><strong>Medium:</strong> Water Color</li>
+                           <li><strong>Dimensions:</strong> 9 in x 12 in</li>
+                        </ul>
+                     </div>
+                  </div>
             </div>
-
-            <div class="mySlides">
-              <div class="numbertext">2 / 5</div>
-              <img src="http://yumechen.com/wp-content/uploads/2019/05/IMG_2866-1024x768.jpg" style="width:100%">
-              <div class="text">
-                <ul>
-                  <li><strong>Title:</strong> Still Life</li>
-                  <li><strong>Artist:</strong> Meng Chen</li>
-                  <li><strong>Date:</strong> 05. 17. 2018</li>
-                  <li><strong>Medium:</strong> Oil on Canvas</li>
-                  <li><strong>Dimensions:</strong> 24 in x 18 in</li>
-                </ul>
-              </div>
-            </div>
-
-            <div class="mySlides">
-              <div class="numbertext">3 / 5</div>
-              <img src="http://yumechen.com/wp-content/uploads/2019/06/IMG_2907-1024x768.jpg" style="width:100%">
-              <div class="text">
-                <ul>
-                  <li><strong>Title:</strong> Future Life-style #1</li>
-                  <li><strong>Artist:</strong> Meng Chen</li>
-                  <li><strong>Date:</strong> 05. 26. 2019</li>
-                  <li><strong>Medium:</strong> Water Color</li>
-                  <li><strong>Dimensions:</strong> 12 in x 9 in</li>
-                </ul>
-              </div>
-            </div>
-    
-            <div class="mySlides">
-              <div class="numbertext">4 / 5</div>
-              <img src="http://yumechen.com/wp-content/uploads/2019/06/IMG_2908-1024x768.jpg" style="width:100%">
-              <div class="text">
-                <ul>
-                  <li><strong>Title:</strong> Future Life-style #2</li>
-                  <li><strong>Artist:</strong> Meng Chen</li>
-                  <li><strong>Date:</strong> 05. 26. 2019</li>
-                  <li><strong>Medium:</strong> Water Color</li>
-                  <li><strong>Dimensions:</strong> 12 in x 9 in</li>
-                </ul>
-              </div>
-            </div>
-        
-            <div class="mySlides">
-              <div class="numbertext">5 / 5</div>
-              <img src="http://yumechen.com/wp-content/uploads/2019/04/IMG_2040-1-768x1024.jpg" style="width:100%">
-              <div class="text">
-                <ul>
-                  <li><strong>Title:</strong> Freehand drawing of Three Apples</li>
-                  <li><strong>Artist:</strong> Meng Chen</li>
-                  <li><strong>Date:</strong> 04. 17. 2018</li>
-                  <li><strong>Medium:</strong> Oil on Canvas</li>
-                  <li><strong>Dimensions:</strong> 6 in x 7 in</li>
-                  <li><strong>Original work:</strong> Three Apples</li>
-                  <li><strong>Original Artist:</strong> Paul Cezanne</li>
-                </ul>
-              </div>
-            </div>
-
-            <!--Next and Previous Buttons-->
-            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-            <a class="next" onclick="plusSlides(1)">&#10095;</a>
-          </div>
+         </div>
       </div>
-    </div>
-  </div>
-<br>
-  
-  <!--The Dots-->
-  <div style="text-align:center">
-    <span class="dot" onclick="currentSlide(1)"></span> 
-    <span class="dot" onclick="currentSlide(2)"></span> 
-    <span class="dot" onclick="currentSlide(3)"></span> 
-    <span class="dot" onclick="currentSlide(4)"></span>
-    <span class="dot" onclick="currentSlide(5)"></span>
-  </div>
-
-  <script>
-     var slideIndex = 1;
-     showSlides(slideIndex);
-
-     function plusSlides(n) 
-     {showSlides(slideIndex += n);}
-
-     function currentSlide(n) 
-     {showSlides(slideIndex = n);}
-
-     function showSlides(n) 
-     {var i;
-      var slides = document.getElementsByClassName("mySlides");
-      var dots = document.getElementsByClassName("dot");
-      if (n > slides.length) {slideIndex = 1}    
-      if (n < 1) {slideIndex = slides.length}
-      for (i = 0; i < slides.length; i++) 
-         {slides[i].style.display = "none";}
-      for (i = 0; i < dots.length; i++) 
-         {dots[i].className = dots[i].className.replace(" active", "");}
-      slides[slideIndex-1].style.display = "block";  
-      dots[slideIndex-1].className += " active";}
-  </script>
-</body>
+   </body>
 </html>
